@@ -1,6 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@eamode/eang/css/all.css';
+@import "~@eamode/eang/css/all.css";
 
 .mode {
-    --ea-color-background-2: #355a7a;
+  --ea-color-background-2: #355a7a;
+  ea-footer {
+    --ea-footer-height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color:white;
+    & main {
+      display: flex;
+      width: 20em;
+      justify-content: space-between;
+    }
   }
+}
