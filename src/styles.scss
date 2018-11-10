@@ -3,7 +3,13 @@
 
 .mode {
   --ea-color-background-2: #355a7a;
-  ea-footer {
+
+ & ea-body {
+  & app-landing {
+    width: 75%;
+  }
+  }
+  & ea-footer {
     --ea-footer-height: auto;
     display: flex;
     flex-direction: column;
