@@ -8,6 +8,7 @@ import { DonationComponent } from './donation/donation.component';
 import { CrowdfundingComponent } from './crowdfunding/crowdfunding.component';
 import { EducationComponent } from './education/education.component';
 import { AboutComponent } from './about/about.component';
+import { TokenComponent } from './token/token.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AboutComponent } from './about/about.component';
     DonationComponent,
     CrowdfundingComponent,
     EducationComponent,
-    AboutComponent
+    AboutComponent,
+    TokenComponent
   ],
   imports: [
     BrowserModule,
