@@ -2,23 +2,24 @@
 <ea-layout>
   <ea-toolbar>
     <header>
-      <p><a routerLink="">WattWatt</a></p>
+      <p>
+        <a routerLink="">WattWatt</a>
+      </p>
     </header>
     <aside>
       <a routerLink="/about">About</a>
       <a routerLink="/whitepaper">Whitepaper</a>
-        <button outline small style="--ea-button-padding: 0.2em 0.5em; --ea-button-border: var(--ea-color-3);">
-          <a routerLink="/token">Token</a>
-        </button>
+      <button outline small style="--ea-button-padding: 0.2em 0.5em; --ea-button-border: var(--ea-color-3);">
+        <a routerLink="/token">Token</a>
+      </button>
     </aside>
   </ea-toolbar>
 
   <ea-drawer>
     <section>
-     <!-- <a routerLink="/about">About</a>-->
       <a routerLink="/donation">Donation Portal</a>
-     <!-- <a routerLink="/crowdfunding">Crowdfunding Portal</a>
-      <a routerLink="/education">Education Portal</a>-->
+      <a routerLink="/crowdfunding">Crowdfunding Portal</a>
+      <!-- <a routerLink="/education">Education Portal</a> -->
     </section>
   </ea-drawer>
 
@@ -27,31 +28,31 @@
       <router-outlet></router-outlet>
     </ea-body>
     <ea-footer>
-        <aside>
-            <h2>WattWatt</h2>
-            <h3>Ethereum-based solar energy financing</h3>
-          </aside>
-          <main>
-            <a href="https://github.com/wattwattenergy">
-              <img src="../../assets/images/github.svg" alt="">
-            </a>
+      <aside>
+        <h2>WattWatt</h2>
+        <h3>Ethereum-based solar energy financing</h3>
+      </aside>
+      <main>
+        <a href="https://github.com/wattwattenergy">
+          <img src="../../assets/images/github.svg" alt="">
+        </a>
 
-            <a href="https://twitter.com/wattwattenergy">
-              <img height="18" src="../../assets/images/twitterWhite.svg" alt="" >
-            </a>
+        <a href="https://twitter.com/wattwattenergy">
+          <img height="18" src="../../assets/images/twitterWhite.svg" alt="">
+        </a>
 
-            <a href="https://www.youtube.com/channel/UCgtn4kRGfcscD--zlEqlmaA?view_as=subscriber">
-              <img src="../../assets/images/youtube.svg" alt="">
-            </a>
+        <a href="https://www.youtube.com/channel/UCgtn4kRGfcscD--zlEqlmaA?view_as=subscriber">
+          <img src="../../assets/images/youtube.svg" alt="">
+        </a>
 
-            <a href="https://medium.com/wattwattenergy">
-              <img src="../../assets/images/medium.svg" alt="">
-            </a>
+        <a href="https://medium.com/wattwattenergy">
+          <img src="../../assets/images/medium.svg" alt="">
+        </a>
 
-            <a href="https://discord.gg/vqWYcCj">
-              <img src="../../assets/images/discord.svg" alt="">
-            </a>
-          </main>
+        <a href="https://discord.gg/vqWYcCj">
+          <img src="../../assets/images/discord.svg" alt="">
+        </a>
+      </main>
     </ea-footer>
   </ea-main>
 </ea-layout>

@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-whitepaper',
   template: `
     <div>
-      <label>PDF src</label>
+      <label></label>
     </div>
     <pdf-viewer
       [src]="pdfSrc"
