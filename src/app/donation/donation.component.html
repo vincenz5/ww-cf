@@ -1,4 +1,4 @@
-<div>
+<div style="display:inline-grid; grid-column-gap:50px; grid-gap:50px;">
   <h2>Puerto Rican Solar</h2>
 
   <img src="../../assets/images/pr.png" alt="" style="width:100%;height:100%;">
@@ -7,12 +7,99 @@
     your capital will be collected by a smart contract and transfered to the address of the installers. You can see this
     smart contract, its code, and its transactions by clicking See Contract.</p>
 
-  <button>Click to Donate</button>
+  <button class="transferFunds" style="width:300px;">Donate Through Smart Contract!</button>
 
   <a href="https://etherscan.io/address/0xba30092ddb563ff13e55d8fd8ee428b87fe52499">
-  <button>See Contract</button>
+    <button>See Crowdfunding Contract</button>
   </a>
 
+  <script src="../path/to/web3.min.js"></script>
+
+  <!--<script>var address = "0xB9f5a8A3C6406995b61655011eBA5d00db9aE6dC";
+    var abi = [{
+      [{ "constant": true, "inputs": [], "name": "getBalance",} "outputs": [{ "name": "", "type": "uint256" }], "payable": false, "stateMutability": "view", "type": "function" }]
+      counter = web3.eth.contract(abi).at(address)];
+     }]
+  </script>-->
+
+  <script>
+      var web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
+      var contract = web3.eth.contract(abiArray).at(contractAddress);
+      var coinBalance = contract.getCoinAccount.call();
+      var energyBalance = contract.getEnergyAccount.call();
+  </script>
+
+</div>
 
 
 
+
+
+
+
+
+<script src="../path/to/web3.min.js"></script>
+<script src="../path/to/ethjs.min.js"></script>
+<script>
+    window.addEventListener('load', function () {
+      // Check if Web3 has been injected by the browser:
+      if (typeof web3 !== 'undefined') {
+        // You have a web3 browser! Continue below!
+        startApp(web3);
+        //alert("Web3");
+      } else {
+        //alert("No hay web3");
+        // Warn the user that they need to get a web3 browser
+        // Or install MetaMask, maybe with a nice graphic.
+      }
+    })
+const abi = [{
+      "constant": false,
+      "inputs": [
+      ],
+      "name": "buy",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": true,
+      "type": "function"
+    }]
+const contract_address = '0xB9f5a8A3C6406995b61655011eBA5d00db9aE6dC'
+const etherValue = web3.toWei(10, 'ether');
+    var address = '0xB9f5a8A3C6406995b61655011eBA5d00db9aE6dC'
+function startApp(web3) {
+      //alert("entro");
+      const eth = new Eth(web3.currentProvider)
+      const token = eth.contract(abi).at(contract_address);
+      listenForClicks(token, web3)
+      //alert("llego");
+    }
+function listenForClicks(miniToken, web3) {
+      var button = document.querySelector('button.transferFunds')
+      web3.eth.getAccounts(function (err, accounts) { console.log(accounts); address = accounts.toString(); })
+      button.addEventListener('click', function () {
+        miniToken.buy({ from: address, value: '1000000000000000000' })
+          .then(function (txHash) {
+            console.log('Transaction sent')
+            console.dir(txHash)
+            waitForTxToBeMined(txHash)
+          })
+          .catch(console.error)
+      })
+    }
+async function waitForTxToBeMined(txHash) {
+      let txReceipt
+      while (!txReceipt) {
+        try {
+          txReceipt = await eth.getTransactionReceipt(txHash)
+        } catch (err) {
+          return indicateFailure(err)
+        }
+      }
+      indicateSuccess()
+    }
+</script>
+<button class="transferFunds">Send Money!</button>
