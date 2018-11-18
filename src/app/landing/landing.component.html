@@ -1,14 +1,11 @@
-<div class="ea-card" unset style="margin: 8rem 0; position:relative;">
-  <div
-    class="ea-card-content"
-    grid
-    style="--ea-card-content-grid: repeat(2, 1fr);"
-    >
+
+<div class="ea-card" unset style="margin: 6em 0 4em 0;">
+  <div class="ea-card-content content-wrap" grid>
     <div>
       <h1>WattWatt</h1>
       <h2>Fund a Panel, Save the World</h2>
-      <div style="display:flex;">
-        <button>Fund a Project</button> <button>Apply for Loan</button>
+      <div class="buttons">
+        <button> <span icon refresh-cw negative></span> Fund a Project</button> <button> <span icon negative add-file></span> Apply for Loan</button>
       </div>
     </div>
   </div>
@@ -37,7 +34,7 @@
   <div
     class="ea-card-content"
     grid
-    style="--ea-card-content-grid:repeat(3,1fr);grid-gap:2rem;"
+    style="--ea-card-content-grid:repeat(auto-fit, minmax(10rem, 1fr));grid-gap:2rem;"
   >
     <div class="ea-card" unset>
       <div
@@ -46,7 +43,7 @@
       >
         <img src="../../assets/images/financing.svg" alt="" />
       </div>
-      <h2 style="text-align:center;">Smart Contracting Vehicle</h2>
+      <h2 style="text-align:center;">Smart Contracting <br> Vehicle</h2>
       <div class="ea-card-content">
         <ul>
           <li>
@@ -125,7 +122,7 @@
   <div
     class="ea-card-content"
     grid
-    style="--ea-card-content-grid:repeat(3,1fr);grid-gap:2rem;"
+    style="--ea-card-content-grid:repeat(auto-fit, minmax(10rem, 1fr));grid-gap:2rem;"
   >
     <div class="ea-card">
       <div class="ea-card-header" style="padding:0;">
@@ -190,17 +187,14 @@
 </div>
 
 <div class="ea-card" unset style="margin: 4rem 0;">
-  <div
-    class="ea-card-content"
-    grid
-    style="--ea-card-content-grid: repeat(2, 1fr); align-items: center;"
+  <div class="ea-card-content content-wrap" grid style="align-items: center;"
   >
     <main>
-      <h2>Join the conversation</h2>
+      <h2 style="margin-top:0;">Join the conversation</h2>
       <h3>Get start in our Discord</h3>
     </main>
-    <aside style="display: flex; justify-content: flex-end">
-      <button large>Discord</button>
+    <aside style="display: flex; justify-content: flex-end; height: 100%;">
+      <button class="discord-button" md> <span style="margin-left: 0;"icon discord></span> Discord</button>
     </aside>
   </div>
 </div>
