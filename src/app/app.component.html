@@ -1,57 +1,78 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- The content below is only a placeholder and can be replaced. -->
 <ea-layout>
   <ea-toolbar>
     <header>
-      <p><a routerLink="">WattWatt</a></p>
+      <button icon flat>
+        <img width="18" src="../assets/images/wattwatt-logo.svg" alt="" style="margin-right: 0.4em;">
+        <a style="margin: 0;" routerLink="">WattWatt</a>
+      </button>
     </header>
     <aside>
-      <a routerLink="/about">About</a>
-      <a routerLink="/whitepaper">Whitepaper</a>
-        <button outline small style="--ea-button-padding: 0.2em 0.5em; --ea-button-border: var(--ea-color-3);">
-          <a routerLink="/token">Token</a>
-        </button>
+      <button sm icon flat>
+        <a style="margin: 0;" routerLink="/about">About</a>
+      </button>
+      <button icon flat>
+        <a style="margin: 0;" routerLink="/whitepaper">Whitepaper</a>
+      </button>
+      <button
+        outline
+        rounded
+        style="--ea-button-padding: 0.2em 0.5em; --ea-button-border: var(--ea-color-3);"
+      >
+        <a routerLink="/token">Token</a>
+      </button>
     </aside>
   </ea-toolbar>
 
   <ea-drawer>
     <section>
-     <!-- <a routerLink="/about">About</a>-->
+      <!-- <a routerLink="/about">About</a> -->
       <a routerLink="/donation">Donation Portal</a>
-     <!-- <a routerLink="/crowdfunding">Crowdfunding Portal</a>
-      <a routerLink="/education">Education Portal</a>-->
+      <a style="margin: 0;" class="mobile" routerLink="/about">About</a>
+      <a routerLink="/token" class="mobile">Token</a>
+      <a style="margin: 0;"class="mobile" routerLink="/whitepaper">Whitepaper</a>
+
+      <!--
+        <a routerLink="/crowdfunding">Crowdfunding Portal</a>
+        <a routerLink="/education">Education Portal</a>
+      -->
     </section>
   </ea-drawer>
 
   <ea-main>
-    <ea-body>
-      <router-outlet></router-outlet>
-    </ea-body>
-    <ea-footer>
-        <aside>
-            <h2>WattWatt</h2>
-            <h3>Ethereum-based solar energy financing</h3>
-          </aside>
-          <main>
-            <a href="https://github.com/wattwattenergy">
-              <img src="../../assets/images/github.svg" alt="">
-            </a>
-
-            <a href="https://twitter.com/wattwattenergy">
-              <img height="18" src="../../assets/images/twitterWhite.svg" alt="" >
-            </a>
-
-            <a href="https://www.youtube.com/channel/UCgtn4kRGfcscD--zlEqlmaA?view_as=subscriber">
-              <img src="../../assets/images/youtube.svg" alt="">
-            </a>
-
-            <a href="https://medium.com/wattwattenergy">
-              <img src="../../assets/images/medium.svg" alt="">
-            </a>
-
-            <a href="https://discord.gg/vqWYcCj">
-              <img src="../../assets/images/discord.svg" alt="">
-            </a>
-          </main>
+    <ea-body> <router-outlet></router-outlet> </ea-body>
+    <ea-footer style="padding: 3rem 0;">
+      <aside>
+        <h2>WattWatt</h2>
+        <h3>Ethereum-based solar energy financing</h3>
+      </aside>
+      <main>
+        <button icon sm flat>
+          <a style="height:1em;" href="https://github.com/wattwattenergy">
+            <img             style="height:1em;"            src="../../assets/images/github.svg" alt="" />
+          </a>
+        </button>
+        <button icon sm flat>
+          <a style="height:1em;" href="https://twitter.com/wattwattenergy">
+            <img style="height:1em;" height="18" src="../../assets/images/twitterWhite.svg" alt=""/>
+          </a>
+        </button>
+        <button icon sm flat>
+          <a style="height:1em;" href="https://www.youtube.com/channel/UCgtn4kRGfcscD--zlEqlmaA?view_as=subscriber">
+            <img style="height:1em;" src="../../assets/images/youtube.svg" alt="" />
+          </a>
+        </button>
+        <button icon sm flat>
+          <a style="height:1em;" href="https://medium.com/wattwattenergy">
+            <img style="height:1em;" src="../../assets/images/medium.svg" alt="" />
+          </a>
+        </button>
+        <button icon sm flat>
+          <a style="height:1em;" href="https://discord.gg/vqWYcCj">
+            <img style="height:1em;" src="../../assets/images/discord.svg" alt="" />
+          </a>
+        </button>
+      </main>
     </ea-footer>
   </ea-main>
 </ea-layout>

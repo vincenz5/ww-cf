@@ -3,18 +3,82 @@
 
 .mode {
   --ea-color-background-2: #355a7a;
+  & span[icon] {
+    &[discord] {
+      background-image: url("assets/images/discord.svg");
+    }
+  }
   ul {
     margin: 0;
     padding: 0;
     & li {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(1, 3rem 1fr);
       align-items: center;
+      justify-items: center;
+      & span[icon] {
+        height: 1.4rem;
+        width: 100%;
+      }
     }
   }
 
   & ea-layout {
+    & ea-drawer {
+      --ea-drawer-background: #ececec;
+      & section {
+        & a,
+        a:visited {
+          color: black;
+          border-bottom: 1px solid #355a7a3b;
+        }
+        & a:hover {
+          background-color: var(--ea-color-background-2);
+          color: white;
+        }
+        & .mobile {
+          @media only screen and (min-width: 640px) {
+            display: none;
+          }
+          @media only screen and (max-width: 640px) {
+            display: block;
+          }
+        }
+      }
+    }
+    & ea-toolbar {
+      & aside {
+        @media only screen and (max-width: 640px) {
+          display: none;
+        }
+      }
+    }
     & ea-body {
-      margin: 0.5em 15vw;
+      margin: 0.5em 10vw;
+      & .content-wrap {
+        --ea-card-content-grid: repeat(2, 1fr);
+        @media only screen and (max-width: 600px) {
+          --ea-card-content-grid: repeat(1, 1fr);
+        }
+        & .buttons {
+          display: flex;
+          & button:nth-child(1) {
+            margin: 0 1rem 0 0;
+            @media only screen and (max-width: 600px) {
+              margin: 0 0 1rem 0;
+            }
+          }
+          @media only screen and (max-width: 600px) {
+            flex-direction: column;
+          }
+        }
+      }
+      & .discord-button {
+        @media only screen and (max-width: 600px) {
+          width: 100%;
+          margin-top: 1.5rem;
+        }
+      }
     }
     & ea-footer {
       --ea-footer-height: auto;
