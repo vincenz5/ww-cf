@@ -26,6 +26,7 @@
   & ea-layout {
     & ea-drawer {
       --ea-drawer-background: #ececec;
+      display: none;
       & section {
         & a,
         a:visited {
@@ -47,6 +48,9 @@
       }
     }
     & ea-toolbar {
+      & > button:first-child{
+        display: none;
+      }
       & aside {
         @media only screen and (max-width: 640px) {
           display: none;
