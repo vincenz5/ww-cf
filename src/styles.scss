@@ -22,9 +22,7 @@
       }
     }
   }
-button {
-  margin: 1rem;
-}
+
   & ea-layout {
     & ea-drawer {
       --ea-drawer-background: #ececec;
@@ -57,6 +55,21 @@ button {
     }
     & ea-body {
       margin: 0.5em 10vw;
+      & .header-img {
+        position: absolute;
+        top: -6vw;
+        width: 39%;
+        right: -7vw;
+        height: 40rem;
+
+        @media only screen and (max-width: 600px) {
+          position: absolute;
+          top: -16vw;
+          width: 99%;
+          right: -47vw;
+          height: 20rem;
+        }
+      }
       & .content-wrap {
         --ea-card-content-grid: repeat(2, 1fr);
         @media only screen and (max-width: 600px) {
