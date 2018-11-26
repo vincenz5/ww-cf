@@ -1,3 +1,4 @@
+
 #!/bin/bash
 # STOP! Before going any further, think: are you going to regret the decision
 # to write this script?
@@ -8,12 +9,5 @@ IFS="`printf "\n\t"`"
 set -eu
 cd "$(dirname "$0")"
 
-read -p "Enter 'wattwatt.io' to confirm: " confirm
-if [[ "$confirm" != "wattwatt.io" ]]; then
-    echo "Error: '$confirm' != 'wattwatt.io'; aborting."
-    exit 1
-fi
-
-host="root@67.205.132.122"
-rsync --stats --progress -avl --delete dist/ "$host":/var/www/wattwatt.io/
-ssh "$host" "chown -R www-data /var/www/wattwatt.io/"
+host="wattwatt@67.205.132.122"
+rsync --stats --progress -avl dist/ "$host":/var/www/wattwatt.io/
