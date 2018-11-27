@@ -24,10 +24,11 @@
     "@eamode/eang": "^1.7.0",
     "core-js": "^2.5.4",
     "eth-lib": "^0.2.8",
+    "ethers": "^4.0.13",
     "ethjs": "^0.4.0",
     "ng2-pdf-viewer": "^5.2.0",
     "rxjs": "~6.3.3",
-    "web3": "^0.20.5",
+    "web3": "^1.0.0-beta.26",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

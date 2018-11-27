@@ -1,35 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import web3 from 'node_modules/web3';
+import { Component, OnInit, Injectable } from '@angular/core';
+// import web3 from 'node_modules/web3';
 import Web3 from 'web3';
+// import * as Web3 from 'web3';
 import ethereum from 'node_modules/web3';
 import eth from 'node_modules/web3';
+import { ethers } from 'ethers';
 
+declare const web3;
 declare var window;
+declare let require: any;
+// declare let window: any;
 
-window.addEventListener('load', async () => {
-  // Modern dapp browsers...
-  if (window.ethereum) {
-    window.web3 = new Web3(ethereum);
-    try {
-      // Request account access if needed
-      await ethereum.enable();
-      // Acccounts now exposed
-      web3.eth.sendTransaction({/* ... */ });
-    } catch (error) {
-      // User denied account access...
-    }
-  }
-  // Legacy dapp browsers...
-  else if (window.web3) {
-    window.web3 = new Web3(web3.currentProvider);
-    // Acccounts always exposed
-    web3.eth.sendTransaction({/* ... */ });
-  }
-  // Non-dapp browsers...
-  else {
-    console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
-  }
-});
+
 
 
 @Component({
@@ -42,7 +24,33 @@ window.addEventListener('load', async () => {
 
 export class DonationComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    window.addEventListener('load', async () => {
+      // Modern dapp browsers...
+      if (window.ethereum) {
+        window.web3 = new Web3(ethereum);
+        try {
+          // Request account access if needed
+          await ethereum.enable();
+          // Acccounts now exposed
+          web3.eth.sendTransaction({/* ... */ });
+        } catch (error) {
+          // User denied account access...
+        }
+      }
+      // Legacy dapp browsers...
+      else if (window.web3) {
+        // window.web3 = new Web3('https://rinkeby.infura.io/v3/c13c854374c8430ca14b58372f47d0f3');
+        window.web3 = new Web3(web3.currentProvider);
+        // Acccounts always exposed
+        web3.eth.sendTransaction({/* ... */ });
+      }
+      // Non-dapp browsers...
+      else {
+        console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+      }
+    });
+   }
 
   ngOnInit() {
   }
@@ -180,9 +188,10 @@ sendDonation (){
       "type": "function"
     }
   ]
-  var Amount = document.getElementById('amount') as HTMLTextAreaElement).value;
-  console.log(Amount)
-  var B = web3.toWei(Amount, "ether")
+  var Amount = parseFloat(document.getElementById('amount').value);
+  // var Amount = document.getElementById('amount') as HTMLTextAreaElement).value;
+  // console.log(Amount)
+  // var B = web3.toWei(Amount, "ether")
   var DonationContract = web3.eth.contract(donationContractABI);
   var donationContract = DonationContract.at(donationContractAddress);
 
@@ -195,7 +204,7 @@ sendDonation (){
   // one USD: 10000000000000000
   // donationContract.deposit(payee, { "from": web3.eth.accounts[0] })
   // console.log(donationContract)
-  donationContract.deposit(payee, { gas: 200000, amount: B  }, console.log)
+  donationContract.deposit(payee, { gas: 200000, amount: 0.2  }, console.log)
     // donationContract.deposit(payee, { gas: 200000, value: Amount }, console.log)
     // .on("receipt", function (receipt) {
     //   this.("#txStatus").text("Thank you for your donation! ");
@@ -215,31 +224,6 @@ sendDonation (){
   }, 10000);
 }
 
-
-  // var inWei = web3.toWei('10', 'ether')
-  // function listenForClicks(miniToken) {
-  //     var button = document.querySelector('button.transferFunds')
-  //     button.addEventListener('click', function () {
-  //         miniToken.transfer(toAddress, value, { from: addr })
-  //             .then(function (txHash) {
-  //                 console.log('Transaction sent')
-  //                 console.dir(txHash)
-  //                 waitForTxToBeMined(txHash)
-  //             })
-  //             .catch(console.error)
-  //     })
-  // }
-
-  // async function waitForTxToBeMined(txHash) {
-  //   let txReceipt
-  //   while (!txReceipt) {
-  //     try {
-  //       txReceipt = await eth.getTransactionReceipt(txHash)
-  //     } catch (err) {
-  //       return indicateFailure(err)
-  //     }
-  //   }
-  // }
 }
 
 
