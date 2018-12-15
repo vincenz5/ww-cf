@@ -27,6 +27,9 @@
     & ea-drawer {
       --ea-drawer-background: #ececec;
       display: none;
+      @media only screen and (max-width: 650px) {
+        display: flex;
+      }
       & section {
         & a,
         a:visited {
@@ -48,11 +51,20 @@
       }
     }
     & ea-toolbar {
-      & > button:first-child{
+      & > button:first-child {
         display: none;
+        @media only screen and (max-width: 650px) {
+          display: block;
+          margin-right: 0.5rem;
+        }
+      }
+      & .whitepaper-link, .about-link {
+        @media only screen and (max-width: 650px) {
+          display: none;
+        }
       }
       & aside {
-        --ea-toolbar-aside-padding:0;
+        --ea-toolbar-aside-padding: 0;
         & button {
           margin: 1rem;
         }
@@ -110,9 +122,9 @@
       }
     }
     & ea-toolbar {
-      & a{
+      & a {
         text-decoration: none;
-        color:white;
+        color: white;
         font-size: 1rem;
       }
     }
