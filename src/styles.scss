@@ -63,6 +63,11 @@
           display: none;
         }
       }
+      & .education-link, .about-link {
+        @media only screen and (max-width: 650px) {
+          display: none;
+        }
+      }
       & aside {
         --ea-toolbar-aside-padding: 0;
         & button {
