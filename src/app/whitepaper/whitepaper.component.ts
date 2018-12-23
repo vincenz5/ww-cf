@@ -17,7 +17,7 @@ import { Component, OnInit } from '@angular/core';
 export class WhitepaperComponent implements OnInit {
   constructor() {}
 
-  pdfSrc = '../assets/whitepaper.pdf';
+  pdfSrc = '../assets/images/whitepaper.pdf';
 
   ngOnInit() {}
 }

@@ -3,39 +3,51 @@
 
     <p>In this portal, you can find education on:</p>
     <span></span>
+    <!-- <ea-tabs>
+        <ea-tab name="Smart Contracts">
+            <p>Stuff about smart contracts</p>
+        </ea-tab>
+    </ea-tabs> -->
     <div class="ea-card-content">
         <ul>
-            <li>
-                <span icon check-circle></span>
-                <a routerLink="">How smart contracts function and why we trust them</a>
-            </li>
-            <li>
-                <span icon check-circle></span>
-                <a routerLink="">
-                    How solar photovoltaic generation works and why it's so cost-effective
-                </a>
-            </li>
-            <li>
-                <span icon check-circle></span>
-                <a routerLink="">How energy project finance works and how we're different</a>
-            </li>
+            <div class="floatleft">
+                <li>
+                    <span icon check-circle></span>
+                    <!-- <input type="button" onClick="document.getElementById('middle').scrollIntoView();" /> -->
+                    <!-- <a href="#tokenomics">Go To Tokenomics</a> -->
+                    <a routerLink="#smartcontracts">How smart contracts function and why we trust them</a>
+                    <!-- <input type="button" value="Click" (click)="tokenomics()"> -->
+                </li>
+                <li>
+                    <span icon check-circle></span>
+                    <a routerLink="#pvenergy">
+                        How solar photovoltaic generation works and why it's so cost-effective
+                    </a>
+                </li>
+                <li>
+                    <span icon check-circle></span>
+                    <!-- <input type="button" value="Click" id="projectfinance"></input> -->
+                    <a routerLink="#projectfinance">How energy project finance works and how we're different</a>
+                </li>
 
-            <li>
-                <span icon check-circle></span>
-                <a routerLink="">
-                    What is tokenomics and how to optimize your decision making
-                </a>
-            </li>
-            <li>
-                <span icon check-circle></span>
-                <a routerLink="">
-                    Different types of auctions and how they improve prices
-                </a>
-            </li>
+                <li>
+                    <span icon check-circle></span>
+                    <a routerLink="#tokenomics">
+                        What is tokenomics and how to optimize your decision making
+                    </a>
+                </li>
+                <li>
+                    <span icon check-circle></span>
+                    <a routerLink="auctions">
+                        Different types of auctions and how they improve prices
+                    </a>
+                </li>
+            </div>
         </ul>
     </div>
 
-    <div class="ea-card" unset>
+    <div class="ea-card" class="floatleft" id="smartcontracts">
+        <img src="../../assets/images/ethereumsmartcontract.jpeg">
         <h3>Smart Contracts</h3>
         <p>Smart contracts are lines of computer code, similar to what tells this website what to do when things are done to
             it.
@@ -43,30 +55,54 @@
         <p>While the lines of code written to control this website may move your screen further down the page when you click
             a button or change the color of an icon when you move your mouse over it, Ethereum smart contracts can:</p>
         <div class="ea-card-content">
-            <ul>
+            <ul style="list-style-type:square">
                 <li>
                     <span></span>
                     <p>Hold Ether or tokens as an escrow, with instructions of where to move it and when</p>
-                    <p>Crowdfunding, with option to return funding at a certain time under certain conditions</p>
-                    <p>Payment channels, where a tab is held for the parties transacting and instructions on what sort of transaction
-                        hash generated off-chain to accept and what to do with it</p>
-                    <p>Auctions and exchanges, which pair parties with each other that wish to buy and sell</p>
+                </li>
+                <li>
+                    <span></span>
+                    <p>Act as payment channels, where a tab is held for the parties transacting and instructions on what sort
+                        of transaction hash generated off-chain to accept and what to do with it</p>
+                </li>
+                <li>
+                    <span></span>
+                    <p>Host auctions and exchanges, which pair parties with each other that wish to buy and sell</p>
+                </li>
+                <li>
+                    <span></span>
+                    <p>Facilitate crowdfunding, with option to return funding at a certain time under certain conditions</p>
                 </li>
                 <li>
                     <span></span>
                     <p>
                         Hold and send a message or some type of data over the blockchain when its code tells it to
                     </p>
+                </li>
+                <li>
+                    <span></span>
                     <p>Store a list of addresses or names, such as verified people, places, or accredited agents</p>
                 </li>
                 <li>
                     <span></span>
                     <p>Create token models with rules implemented in the code governing the use of the tokens</p>
+                </li>
+                <li>
+                    <span></span>
                     <p>Allows for tokenomics to take place, where players interact in an economic game that coordinates them
                         in a joint effort that will benefit them all</p>
+                </li>
+                <li>
+                    <span></span>
                     <p>Use the tokens as a marker of Ethereum wallet addresses that are owed something or have proven something</p>
+                </li>
+                <li>
+                    <span></span>
                     <p>Some projects have built token models that generate tokens with ability to be a valuable means of exchange,
                         such as tokens with price stable relative to fiat currency</p>
+                </li>
+                <li>
+                    <span></span>
                     <p>Tokens can be granted rights to change the encoded rules in a smart contract through voting</p>
                 </li>
 
@@ -75,8 +111,14 @@
                     <p>
                         Act as neutral, unbiased arbiters between parties in a transaction
                     </p>
+                </li>
+                <li>
+                    <span></span>
                     <p>Similar to escrow services, the smart contract has no bias besides what's encoded in it and available
                         for any users to review</p>
+                </li>
+                <li>
+                    <span></span>
                     <p>Parties can review the rules and agree to lock themselves into the rules of the smart contract code or
                         otherwise avoid using the smart contract</p>
                 </li>
@@ -86,12 +128,16 @@
                     <p>
                         Mint new tokens based on its internally coded rules
                     </p>
+                </li>
+                <li>
+                    <span></span>
                     <p>Some projects have multi-token economic models where owning the project's token gives one the ability
                         to mint another token used for platform services</p>
                 </li>
             </ul>
         </div>
         <div>
+            <img style="width:20%;height:20%;" src="../../assets/images/ethereum.png">
             <h4>The Ethereum Blockchain</h4>
             <p>To understand what makes Ethereum smart contracts valuable, it's worth knowing what makes Ethereum valuable first.
                 In short, Ethereum allows for accounting to be recorded on an immutable, public ledger. Accounting doesn't
@@ -177,7 +223,7 @@
         </div>
     </div>
 
-    <div class="ea-card" unset>
+    <div class="ea-card" class="floatleft" id="pvenergy">
         <h3>Solar PV Energy</h3>
         <p>Solar photovoltaic energy generation is now among the most economic methods to generate electricity. We'll explore
             how this has come to be and how it works here.
@@ -189,11 +235,14 @@
         <p>Types of silicon cell structures:</p>
         <div>
             <span></span>
+            <img style="width:20%;height:20%;" src="../../assets/images/monocrystalline.jpeg">
             <h4>Monocrystalline</h4>
             <p>Produced from one single silicon block</p>
             <p>Converts more solar energy into electricity than the others</p>
             <p>Requires heating to melt and allow the 'grains' (mesh of silicon atoms) of silicon to align themselves</p>
             <span></span>
+
+            <img style="width:20%;height:20%;" src="../../assets/images/polycrystalline.jpeg">
 
             <h4>Polycrystalline</h4>
             <p>Most popular technology of the three main ones</p>
@@ -289,7 +338,7 @@
         </div>
     </div>
 
-    <div class="ea-card" unset>
+    <div class="ea-card" class="floatleft" id="projectfinance">
         <h3>Project Finance</h3>
         <p>Currently, large firms handle the funding needs of solar developers for the majority of projects.
         </p>
@@ -328,8 +377,8 @@
             implemented to reduce extreme variability throughout the day and in turn improve generator's effeciency and cost.</p>
 
     </div>
-    <div class="ea-card" unset>
-        <h3>Tokenomics</h3>
+    <div class="ea-card" class="floatleft">
+        <h3 id="tokenomics">Tokenomics</h3>
         <p>Refers to the system of tokens and the rules behind them that lead people to behave in certain ways. If people follow
             the behavior incentivized by the token model, everyone in the network will be better off than if they failed
             to coordinate and competed instead. It's important to first understand the signficance of losses due to competition
@@ -407,7 +456,7 @@
         </div>
     </div>
 
-    <div class="ea-card" unset>
+    <div class="ea-card" class="floatleft" id="auctions" unset>
         <h3>Auctions</h3>
         <p>Individuals and organizations need some sort of logic to arrive at a price for something. This can be done by professionals
             after investigation into the purchase but is difficult for an individual who doesn't have the time or means to
