@@ -11,37 +11,38 @@
     <div class="ea-card-content">
         <ul>
             <div class="floatleft">
-                <li>
+                <li class="titles">
                     <span icon check-circle></span>
                     <!-- <input type="button" onClick="document.getElementById('middle').scrollIntoView();" /> -->
                     <!-- <a href="#tokenomics">Go To Tokenomics</a> -->
-                    <a routerLink="#smartcontracts">How smart contracts function and why we trust them</a>
+                    <a routerLink="#smartcontracts">Smart Contract Technology</a>
                     <!-- <input type="button" value="Click" (click)="tokenomics()"> -->
                 </li>
-                <li>
+                <li class="titles">
                     <span icon check-circle></span>
                     <a routerLink="#pvenergy">
-                        How solar photovoltaic generation works and why it's so cost-effective
+                        Solar Photovoltaic Generation
                     </a>
                 </li>
-                <li>
+                <li class="titles">
                     <span icon check-circle></span>
                     <!-- <input type="button" value="Click" id="projectfinance"></input> -->
-                    <a routerLink="#projectfinance">How energy project finance works and how we're different</a>
+                    <a routerLink="#projectfinance">Energy Project Finance</a>
                 </li>
 
-                <li>
+                <li class="titles">
                     <span icon check-circle></span>
                     <a routerLink="#tokenomics">
-                        What is tokenomics and how to optimize your decision making
+                        Tokenomics with Examples
                     </a>
                 </li>
-                <li>
+                <li class="titles">
                     <span icon check-circle></span>
                     <a routerLink="auctions">
-                        Different types of auctions and how they improve prices
+                        Auctions and Prices
                     </a>
                 </li>
+
             </div>
         </ul>
     </div>
@@ -479,6 +480,10 @@
         <div>
             <h4>Examples of Auctions</h4>
             <p>Dutch Auction</p>
+            <p>Descending price auction, where the price continues to be bid down until someone claims the object. They would
+                claim because they believe that if they don't claim it at the price, someone else will on the next drop.
+                It's a market for buyers to determine what's the most they're willing to pay to ensure they get the object
+                while considering what the object may be worth to the other buyers.</p>
             <p>Can discover pricing more effeciently because it discovers what buyers are willing to pay, at most, and what
                 sellers are willing to sell at, at the least, then combines this information to find the most optimal middle-ground.
                 Buyers will not pay more than they can and sellers do not receive less than what they need. The buyers that
@@ -487,7 +492,8 @@
             <p>First Price Auction</p>
             <p>What people traditionally imagine when they think of an auction: people continue to bid until nobody else is
                 willing to pay more than whoever ends up winning. What this can cause is a buyer to spend a lot more than
-                they would have in a Dutch auction and can allow for manipulation.</p>
+                they would have in a Dutch auction and can allow for manipulation. As a positive, it's easy to understand
+                the strategy, can be executed quickly, and does not require lots of coordination.</p>
             <p>Second Price Auction</p>
             <p>Can improve price discovery over first price auctions. The auction happens in much the same way as a first price
                 auction but the purchase price is the second-to-last bid, put forth by losing bidder. The buyer with the
