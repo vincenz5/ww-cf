@@ -8,6 +8,36 @@
     // text-align:left;
     // width: 90px;
     // }
+    .glossary {
+    border: 2px solid #305b8a;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(128, 128, 128, 0.201);
+    }
+
+    .info {
+    background-color: rgb(203, 194, 194);
+    margin-bottom: 50px;
+    border: 1px solid blue;
+    padding: 20px;
+    }
+
+    .llist {
+        list-style-type: square;
+    }
+
+    .contractlist {
+        text-align: left;
+    }
+
+    .smartlist {
+        text-align: left;
+    }
+
     ul li {
     padding-left:0px;
     list-style:none;

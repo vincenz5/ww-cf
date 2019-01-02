@@ -8,46 +8,47 @@
             <p>Stuff about smart contracts</p>
         </ea-tab>
     </ea-tabs> -->
-    <div class="ea-card-content">
+    <div>
         <ul>
-            <div class="floatleft">
-                <li class="titles">
-                    <span icon check-circle></span>
-                    <!-- <input type="button" onClick="document.getElementById('middle').scrollIntoView();" /> -->
-                    <!-- <a href="#tokenomics">Go To Tokenomics</a> -->
-                    <a routerLink="#smartcontracts">Smart Contract Technology</a>
-                    <!-- <input type="button" value="Click" (click)="tokenomics()"> -->
-                </li>
-                <li class="titles">
-                    <span icon check-circle></span>
-                    <a routerLink="#pvenergy">
-                        Solar Photovoltaic Generation
-                    </a>
-                </li>
-                <li class="titles">
-                    <span icon check-circle></span>
-                    <!-- <input type="button" value="Click" id="projectfinance"></input> -->
-                    <a routerLink="#projectfinance">Energy Project Finance</a>
-                </li>
+            <div>
+                <div class="glossary">
+                    <li class="titles">
+                        <span icon check-circle></span>
+                        <!-- <input type="button" onClick="document.getElementById('middle').scrollIntoView();" /> -->
+                        <!-- <a href="#tokenomics">Go To Tokenomics</a> -->
+                        <a routerLink="#smartcontracts">Smart Contract Technology</a>
+                        <!-- <input type="button" value="Click" (click)="tokenomics()"> -->
+                    </li>
+                    <li class="titles">
+                        <span icon check-circle></span>
+                        <a routerLink="#pvenergy">
+                            Solar Photovoltaic Generation
+                        </a>
+                    </li>
+                    <li class="titles">
+                        <span icon check-circle></span>
+                        <!-- <input type="button" value="Click" id="projectfinance"></input> -->
+                        <a routerLink="#projectfinance">Energy Project Finance</a>
+                    </li>
 
-                <li class="titles">
-                    <span icon check-circle></span>
-                    <a routerLink="#tokenomics">
-                        Tokenomics with Examples
-                    </a>
-                </li>
-                <li class="titles">
-                    <span icon check-circle></span>
-                    <a routerLink="auctions">
-                        Auctions and Prices
-                    </a>
-                </li>
-
+                    <li class="titles">
+                        <span icon check-circle></span>
+                        <a routerLink="#tokenomics">
+                            Tokenomics with Examples
+                        </a>
+                    </li>
+                    <li class="titles">
+                        <span icon check-circle></span>
+                        <a routerLink="auctions">
+                            Auctions and Prices
+                        </a>
+                    </li>
+                </div>
             </div>
         </ul>
     </div>
 
-    <div class="ea-card" class="floatleft" id="smartcontracts">
+    <div class="info" id="smartcontracts">
         <img src="../../assets/images/ethereumsmartcontract.jpeg">
         <h3>Smart Contracts</h3>
         <p>Smart contracts are lines of computer code, similar to what tells this website what to do when things are done to
@@ -55,15 +56,15 @@
         </p>
         <p>While the lines of code written to control this website may move your screen further down the page when you click
             a button or change the color of an icon when you move your mouse over it, Ethereum smart contracts can:</p>
-        <div class="ea-card-content">
-            <ul style="list-style-type:square">
+        <div class="contractlist">
+            <ul class="llist" style="list-style-type:square">
                 <li>
                     <span></span>
-                    <p>Hold Ether or tokens as an escrow, with instructions of where to move it and when</p>
+                    <p class="smartlist">Hold Ether or tokens as an escrow, with instructions of where to move it and when</p>
                 </li>
                 <li>
                     <span></span>
-                    <p>Act as payment channels, where a tab is held for the parties transacting and instructions on what sort
+                    <p class="smartlist">Act as payment channels, where a tab is held for the parties transacting and instructions on what sort
                         of transaction hash generated off-chain to accept and what to do with it</p>
                 </li>
                 <li>
@@ -137,6 +138,7 @@
                 </li>
             </ul>
         </div>
+        <span></span>
         <div>
             <img style="width:20%;height:20%;" src="../../assets/images/ethereum.png">
             <h4>The Ethereum Blockchain</h4>
@@ -224,7 +226,7 @@
         </div>
     </div>
 
-    <div class="ea-card" class="floatleft" id="pvenergy">
+    <div class="ea-card" class="info" id="pvenergy">
         <h3>Solar PV Energy</h3>
         <p>Solar photovoltaic energy generation is now among the most economic methods to generate electricity. We'll explore
             how this has come to be and how it works here.
@@ -339,7 +341,7 @@
         </div>
     </div>
 
-    <div class="ea-card" class="floatleft" id="projectfinance">
+    <div class="ea-card" class="info" id="projectfinance">
         <h3>Project Finance</h3>
         <p>Currently, large firms handle the funding needs of solar developers for the majority of projects.
         </p>
@@ -378,7 +380,7 @@
             implemented to reduce extreme variability throughout the day and in turn improve generator's effeciency and cost.</p>
 
     </div>
-    <div class="ea-card" class="floatleft">
+    <div class="info">
         <h3 id="tokenomics">Tokenomics</h3>
         <p>Refers to the system of tokens and the rules behind them that lead people to behave in certain ways. If people follow
             the behavior incentivized by the token model, everyone in the network will be better off than if they failed
@@ -457,7 +459,7 @@
         </div>
     </div>
 
-    <div class="ea-card" class="floatleft" id="auctions" unset>
+    <div class="ea-card" class="info" id="auctions" unset>
         <h3>Auctions</h3>
         <p>Individuals and organizations need some sort of logic to arrive at a price for something. This can be done by professionals
             after investigation into the purchase but is difficult for an individual who doesn't have the time or means to
