@@ -7,6 +7,7 @@ import { DonationComponent } from 'src/app/donation/donation.component';
 import { EducationComponent } from 'src/app/education/education.component';
 import { TokenComponent } from './token/token.component';
 import { WhitepaperComponent } from './whitepaper/whitepaper.component';
+import { TestpageComponent } from './testpage/testpage.component';
 
 const routes: Routes =
 [{ path: '', component: LandingComponent },
@@ -15,7 +16,8 @@ const routes: Routes =
 { path: 'crowdfunding', component: CrowdfundingComponent },
 { path: 'education', component: EducationComponent },
 { path: 'token', component: TokenComponent },
-{ path: 'whitepaper', component: WhitepaperComponent }];
+{ path: 'whitepaper', component: WhitepaperComponent },
+{ path: 'testpage', component: TestpageComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
