@@ -2,7 +2,14 @@
 @import "~@eamode/eang/css/all.css";
 
 .mode {
-  --ea-color-background-2: #355a7a;
+  --ea-color-1: hsl(208, 39%, 34%);
+  --ea-color-1-light:hsl(208, 39%, 40%);
+  & ea-layout {
+    & ea-body {
+      display: flex;
+      justify-content: center;
+    }
+  }
   & span[icon] {
     &[discord] {
       background-image: url("assets/images/discord.svg");

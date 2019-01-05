@@ -20,9 +20,9 @@
     }
 
     .info {
-    background-color: rgb(203, 194, 194);
+    // background-color: rgb(203, 194, 194);
     margin-bottom: 50px;
-    border: 1px solid blue;
+    // border: 1px solid blue;
     padding: 20px;
     }
 
@@ -71,3 +71,12 @@
     //     padding-right: 4px;
     //     content: url("../images/mod-bullet-green.png");
     // }
+
+    app-education {
+      display: flex;
+      justify-content: center;
+      & > section {
+        width: 60%;
+      }
+    }
+
