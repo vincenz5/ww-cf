@@ -10,7 +10,8 @@ import { WhitepaperComponent } from './whitepaper/whitepaper.component';
 import { TestpageComponent } from './testpage/testpage.component';
 
 const routes: Routes =
-[{ path: '', component: LandingComponent },
+[{ path: '', redirectTo: 'landing', pathMatch: 'full' },
+{ path: '', component: LandingComponent },
 { path: 'about', component: AboutComponent },
 { path: 'donation', component: DonationComponent },
 { path: 'crowdfunding', component: CrowdfundingComponent },

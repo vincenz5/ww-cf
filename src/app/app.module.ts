@@ -13,6 +13,10 @@ import { PdfViewerModule } from "ng2-pdf-viewer";
 import { WhitepaperComponent } from './whitepaper/whitepaper.component';
 import { TestpageComponent } from './testpage/testpage.component';
 
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+// import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +37,8 @@ import { TestpageComponent } from './testpage/testpage.component';
     LayoutModule,
     PdfViewerModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule {}
