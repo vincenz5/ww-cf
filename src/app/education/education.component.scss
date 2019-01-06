@@ -8,6 +8,15 @@
     // text-align:left;
     // width: 90px;
     // }
+.title {
+    margin-left: 65px;
+    margin-right: 35px;
+}
+
+#ea-tab {
+    margin: 0.1em !important;
+}
+
     .glossary {
     border: 2px solid #305b8a;
     margin-top: 50px;
@@ -24,6 +33,8 @@
     margin-bottom: 50px;
     // border: 1px solid blue;
     padding: 20px;
+    margin-right: 20px;
+    text-align: justify;
     }
 
     .llist {
