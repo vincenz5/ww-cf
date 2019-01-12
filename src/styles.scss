@@ -2,6 +2,19 @@
 @import "~@eamode/eang/css/all.css";
 
 .mode {
+  & ea-tabs{
+    & ea-menu {
+      // padding-right: 1.1em;
+        min-width:fit-content;
+        & .ea-tree-children {
+            overflow: scroll;
+            margin-right: 3em;
+        & app-education  {
+          width: 100%}
+        }
+    }
+}
+
   --ea-color-1: hsl(208, 39%, 34%);
   --ea-color-1-light:hsl(208, 39%, 40%);
   & ea-layout {
