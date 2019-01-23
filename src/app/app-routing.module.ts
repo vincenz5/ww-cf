@@ -8,6 +8,7 @@ import { EducationComponent } from 'src/app/education/education.component';
 import { TokenComponent } from './token/token.component';
 import { WhitepaperComponent } from './whitepaper/whitepaper.component';
 import { TestpageComponent } from './testpage/testpage.component';
+import { OnboardComponent } from './onboard/onboard.component';
 
 const routes: Routes =
 [{ path: '', redirectTo: 'landing', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const routes: Routes =
 { path: 'education', component: EducationComponent },
 { path: 'token', component: TokenComponent },
 { path: 'whitepaper', component: WhitepaperComponent },
-{ path: 'testpage', component: TestpageComponent }];
+{ path: 'testpage', component: TestpageComponent },
+{ path: 'onboard', component: OnboardComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

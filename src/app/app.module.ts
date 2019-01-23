@@ -14,6 +14,7 @@ import { WhitepaperComponent } from './whitepaper/whitepaper.component';
 import { TestpageComponent } from './testpage/testpage.component';
 
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import { OnboardComponent } from './onboard/onboard.component';
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
@@ -27,7 +28,8 @@ import {LocationStrategy, HashLocationStrategy} from '@angular/common';
     AboutComponent,
     TokenComponent,
     WhitepaperComponent,
-    TestpageComponent
+    TestpageComponent,
+    OnboardComponent
   ],
   imports: [
     BrowserModule,
