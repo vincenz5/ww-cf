@@ -12,9 +12,10 @@ import { TokenComponent } from "./token/token.component";
 import { PdfViewerModule } from "ng2-pdf-viewer";
 import { WhitepaperComponent } from './whitepaper/whitepaper.component';
 import { TestpageComponent } from './testpage/testpage.component';
+import { OnboardComponent } from './onboard/onboard.component';
 
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
-import { OnboardComponent } from './onboard/onboard.component';
+// import { OnboardComponent } from './onboard/onboard.component';
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
