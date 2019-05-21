@@ -19,7 +19,24 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding-bottom: 14rem;
-  margin: 0rem;
+}
+
+#connectM {
+  margin-top: 0.2rem;
+}
+
+.metamask {
+  margin-left: 4rem;
+  margin-right: 3rem;
+  display: inline;
+  position: absolute;
+}
+
+.wyre {
+  position: absolute;
+  
+  margin-right: 4rem;
+  // display: inline;
 }
 
 #amount {
@@ -104,6 +121,10 @@ body {
   // z-index: 1;
 }
 
+#topnav1 {
+  position: relative;
+}
+
 ul {
   position: relative;
   margin: 0;
@@ -129,7 +150,9 @@ ul {
         height: auto;
         text-align: center;
         left: 1rem;
-        top: -1rem;
+        vertical-align: middle;
+        top: 0;
+        margin-left: 3rem;
       }
 
     #signup1 {
@@ -139,7 +162,7 @@ ul {
 
 // Cards
 .cards {
-  margin-top: 5rem;
+  margin: 5rem 0.2rem 0 0.2rem;
   .card {
     margin: 3rem 2rem 1rem;
     border-bottom: 3px solid #000000;
@@ -164,7 +187,7 @@ ul {
         .submittal {
           color: rgb(86, 86, 141);
           border-radius: 3rem;
-          padding: 1rem 2rem 1rem;
+          padding: 0.5rem 1rem 0.5rem;
           font-size: 2rem;
         }
 
@@ -183,8 +206,12 @@ ul {
 
 @media only screen and (max-width: 600px) {
   #title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0.5rem 0.2rem 0rem 0.2rem;
+  }
+
+  .cards {
+    margin-top: 7rem;
   }
 
   /* DYNAMIC NAVIGATION BAR
@@ -222,5 +249,25 @@ ul {
   .submittal {
     padding: 0.5rem 1.5rem 0.5rem;
     font-size: 1.5rem;
+  }
+  #connectM {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .metamask {
+    margin-right: 0rem;
+    display: flex;
+    left: 0;
+    margin-left: 0rem;
+  }
+
+  .wyre {
+    display: flex;
+    margin-top: 2.5rem;
+    margin-right: 0rem;
+    left: 0;
+    display: inline-block;
+    margin-bottom: 3rem;
   }
 }
