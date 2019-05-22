@@ -1,9 +1,11 @@
 <section class="title">
+  <div id="top">
   <h1>WattWatt Educational Portal</h1>
 
   <p>In this portal, you can find education on:</p>
+  </div>  
   <span></span>
-  <ea-tabs style="width:1000px;text-align:center;overflow:auto;">
+  <ea-tabs>
     <ea-tab name="Smart Contracts">
       <div class="info" id="smartcontracts">
         <img src="../../assets/images/ethereumsmartcontract.jpeg" />
@@ -19,130 +21,82 @@
           contracts can:
         </p>
         <div class="contractlist">
-          <ul class="llist" style="list-style-type:square">
+          <ul class="llist">
             <li>
-              <span></span>
-              <p class="smartlist">
                 Hold Ether or tokens as an escrow, with instructions of where to
                 move it and when
-              </p>
             </li>
             <li>
-              <span></span>
-              <p class="smartlist">
                 Act as payment channels, where a tab is held for the parties
                 transacting and instructions on what sort of transaction hash
                 generated off-chain to accept and what to do with it
-              </p>
             </li>
             <li>
-              <span></span>
-              <p>
                 Host auctions and exchanges, which pair parties with each other
                 that wish to buy and sell
-              </p>
             </li>
             <li>
-              <span></span>
-              <p>
                 Facilitate crowdfunding, with option to return funding at a
                 certain time under certain conditions
-              </p>
             </li>
             <li>
-              <span></span>
-              <p>
                 Hold and send a message or some type of data over the blockchain
                 when its code tells it to
-              </p>
             </li>
             <li>
-              <span></span>
-              <p>
                 Store a list of addresses or names, such as verified people,
                 places, or accredited agents
-              </p>
             </li>
             <li>
-              <span></span>
-              <p>
                 Create token models with rules implemented in the code governing
                 the use of the tokens
-              </p>
             </li>
             <li>
-              <span></span>
-              <p>
                 Allows for tokenomics to take place, where players interact in
                 an economic game that coordinates them in a joint effort that
                 will benefit them all
-              </p>
             </li>
             <li>
-              <span></span>
-              <p>
                 Use the tokens as a marker of Ethereum wallet addresses that are
                 owed something or have proven something
-              </p>
             </li>
             <li>
-              <span></span>
-              <p>
                 Some projects have built token models that generate tokens with
                 ability to be a valuable means of exchange, such as tokens with
                 price stable relative to fiat currency
-              </p>
             </li>
             <li>
-              <span></span>
-              <p>
                 Tokens can be granted rights to change the encoded rules in a
                 smart contract through voting
-              </p>
             </li>
-
             <li>
-              <span></span>
-              <p>
                 Act as neutral, unbiased arbiters between parties in a
                 transaction
-              </p>
             </li>
             <li>
-              <span></span>
-              <p>
                 Similar to escrow services, the smart contract has no bias
                 besides what's encoded in it and available for any users to
                 review
-              </p>
             </li>
             <li>
-              <span></span>
-              <p>
                 Parties can review the rules and agree to lock themselves into
                 the rules of the smart contract code or otherwise avoid using
                 the smart contract
-              </p>
-            </li>
-
-            <li>
-              <span></span>
-              <p>Mint new tokens based on its internally coded rules</p>
             </li>
             <li>
-              <span></span>
-              <p>
+                Mint new tokens based on its internally coded rules
+            </li>
+            <li>
                 Some projects have multi-token economic models where owning the
                 project's token gives one the ability to mint another token used
                 for platform services
-              </p>
             </li>
           </ul>
         </div>
         <span></span>
-        <div>
+        <div class="sections">
           <img
-            style="width:20%;height:20%;"
+          id="ether"
             src="../../assets/images/ethereum.png"
           />
           <h4>The Ethereum Blockchain</h4>
@@ -189,7 +143,7 @@
             deployment of the contract code.
           </p>
         </div>
-        <div>
+        <div class="sections">
           <h4>Crowdlending and Finance on a Blockchain</h4>
           <p>More to the point of what this means for funding of a project:</p>
           <p>
@@ -244,7 +198,7 @@
             because they'd prefer to have something else.
           </p>
         </div>
-        <div>
+        <div class="sections">
           <h4>Repayment Enforcement</h4>
           <p>
             Using a neutral entity like a smart contract, arbitration betwen
@@ -721,7 +675,7 @@
       </div>
     </ea-tab>
     <ea-tab name="Auctions and Prices">
-      <div class="ea-card" class="info" id="auctions" style="margin-right:3em;" unset>
+      <div class="ea-card" class="info" id="auctions" unset>
         <h3>Auctions</h3>
         <p>
           Individuals and organizations need some sort of logic to arrive at a

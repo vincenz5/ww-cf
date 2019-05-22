@@ -11,38 +11,43 @@
 
   <body>
     <p id="title">Welcome to Decentralized Energy Financing</p>
-<div id="topnav1">
-    <nav id="topnav">
-      <ul>
-        <!-- <li><img id="logo" src="../../assets/images/WattWattLogo.png" /></li> -->
-        <!-- <li><a href="#section1">Find A Loan</a></li>
+    <div id="top">
+    <div id="topnav1">
+      <nav id="topnav">
+        <ul>
+          <!-- <li><img id="logo" src="../../assets/images/WattWattLogo.png" /></li> -->
+          <!-- <li><a href="#section1">Find A Loan</a></li>
         <li><a href="#section2">Your Loans</a></li> -->
-        <!-- <li><a href="#section3">Borrow</a></li>
+          <!-- <li><a href="#section3">Borrow</a></li>
         <li><a href="#section4">Learn</a></li> -->
-        <!-- <li><a id="signup1" href="#section4">Signup ▼</a></li> -->
-      </ul>
-    </nav>
-  </div>
-    <div id="connectM">
-      <button
-        onClick="Connect()"
-        id="connect"
-        class="metamask"
-        target="_blank;"
-      >
-        Connect to Metamask!
-      </button>
-
-      <button
-      id="connect"
-      class="wyre"
-      target="_blank;"
-      id="verifyButton"
-    >
-      Onboard through Wyre!
-    </button>
+          <!-- <li><a id="signup1" href="#section4">Signup ▼</a></li> -->
+        </ul>
+      </nav>
     </div>
+    <div id="connectM" class="buttons">
+      <span>
+        <button
+          onClick="Connect()"
+          id="connect"
+          class="metamask"
+          target="_blank;"
+        >
+          Connect to Metamask!
+        </button>
 
+        <button
+          onClick="WyreW()"
+          id="connect"
+          class="wyre"
+          target="_blank;"
+          id="verifyButton"
+        >
+          Onboard through Wyre!
+        </button>
+      </span>
+    </div>
+  </div>
+  
     <div class="cards">
       <div class="card">
         <img

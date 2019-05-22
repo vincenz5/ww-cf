@@ -64,7 +64,7 @@
         var src = web3.eth.accounts[0];
         var payee = "0x76c67F724d155bf2725350bDF809460f5636bEc9";
         // var wad = 1000000000000000000;
-        var Amount = 1;
+        var Amount = 0.1;
         var B = web3.toWei(Amount, "ether");
 
         var payContractABI = [
@@ -655,12 +655,10 @@
       });
       console.log('wyre');
       // open the widget when the user presses the button
-      document
-        .getElementById("verifyButton")
-        .addEventListener("click", function(e) {
+      function WyreW(e) {
           widget.open();
           console.log("here");
-        });
+        };
 
       //add events here
       widget.on("complete", function(event) {

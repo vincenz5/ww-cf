@@ -21,22 +21,28 @@ body {
   padding-bottom: 14rem;
 }
 
+#top {
+  position: relative;
+
+}
+
 #connectM {
-  margin-top: 0.2rem;
+  margin-top: 0.5rem;
+  width: 60%;
+  margin: auto;
+  position: relative;
 }
 
 .metamask {
-  margin-left: 4rem;
-  margin-right: 3rem;
   display: inline;
-  position: absolute;
+  margin: auto;
+  // position: absolute;
 }
 
 .wyre {
+  right: 0;
   position: absolute;
-  
-  margin-right: 4rem;
-  // display: inline;
+  display: inline;
 }
 
 #amount {
@@ -48,13 +54,22 @@ body {
   margin-left: 3rem !important;
 }
 
-.tag::after {
+.tag {
   position: relative;
+  width: 40%;
+  padding: 1rem 0.2rem 1rem 2rem;
+}
+
+.tag::after {
+  position: absolute;
   // top: 2px;
-  right: 3em;
+  right: 1rem;
   transition: all .05s ease-in-out;
   content: 'USD';
   font-size: 1.5rem;
+  display: inline;
+  top: 30%;
+  vertical-align: middle;
 }
 
 .container {
@@ -106,7 +121,7 @@ body {
   background: $color1;
   transition: (all, 650ms, cubic-bezier(0.22, 1, 0.25, 1));
   color: $color1;
-  z-index: 9;
+  // z-index: 9;
   content: "";
 
   //   &:before {
@@ -123,6 +138,7 @@ body {
 
 #topnav1 {
   position: relative;
+  margin-bottom: 0.4rem;
 }
 
 ul {
@@ -176,7 +192,7 @@ ul {
         margin-left: 1rem;
         margin-right: 1rem;
       #currency {
-        padding: 1rem 0rem 1rem 2rem;
+
         font-size: 2rem;
       }
       .button {
@@ -201,6 +217,33 @@ ul {
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .metamask {
+    display: flex;
+    margin-bottom: 0.7rem;
+    margin: auto;
+    position: relative;
+  }
+
+  .wyre {
+    display: flex;
+    margin-top: 0.7rem;
+    margin: auto;
+    position: relative;
+    
+  }
+
+  .tag {
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    position: relative;
+    float: right;
+    bottom: 0rem;
   }
 }
 
@@ -246,6 +289,11 @@ ul {
       }
     }
   }
+
+  .button {
+    margin-right: 3rem;
+  }
+
   .submittal {
     padding: 0.5rem 1.5rem 0.5rem;
     font-size: 1.5rem;
@@ -256,10 +304,11 @@ ul {
   }
 
   .metamask {
-    margin-right: 0rem;
+    margin: auto;
     display: flex;
     left: 0;
-    margin-left: 0rem;
+    // margin-left: 0rem;
+    position: relative;
   }
 
   .wyre {
