@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { PanelModule, AutoCompleteModule, LayoutModule } from "@eamode/eang";
+import { PanelModule, AutoCompleteModule, LayoutModule, TabsComponent, TabsModule } from "@eamode/eang";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LandingComponent } from "./landing/landing.component";
@@ -11,6 +11,13 @@ import { AboutComponent } from "./about/about.component";
 import { TokenComponent } from "./token/token.component";
 import { PdfViewerModule } from "ng2-pdf-viewer";
 import { WhitepaperComponent } from './whitepaper/whitepaper.component';
+import { TestpageComponent } from './testpage/testpage.component';
+import { OnboardComponent } from './onboard/onboard.component';
+
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+// import { OnboardComponent } from './onboard/onboard.component';
+// import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +28,9 @@ import { WhitepaperComponent } from './whitepaper/whitepaper.component';
     EducationComponent,
     AboutComponent,
     TokenComponent,
-    WhitepaperComponent
+    WhitepaperComponent,
+    TestpageComponent,
+    OnboardComponent
   ],
   imports: [
     BrowserModule,
@@ -29,9 +38,11 @@ import { WhitepaperComponent } from './whitepaper/whitepaper.component';
     PanelModule,
     AutoCompleteModule,
     LayoutModule,
-    PdfViewerModule
+    PdfViewerModule,
+    TabsModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
+
 })
 export class AppModule {}

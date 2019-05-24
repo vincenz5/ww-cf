@@ -1,70 +1,254 @@
-<p>
-  Preview our upcoming crowdfunding portal of solar projects looking for funding:
-</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WattWatt- Decentralized Lending</title>
+    <!-- <base href="https://vincenzbuhler.com/WattWatt/portal" /> -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
 
-<h2>(Page in Construction)</h2>
-
-<div class="ea-card">
-  <div class="ea-card-header">
-    <p>Currently Fundraising</p>
-    <div content>
-      <button icon>
-        <span icon download></span>
-      </button>
+  <body>
+    <p id="title">Welcome to Decentralized Energy Financing</p>
+    <div id="top">
+    <div id="topnav1">
+      <nav id="topnav">
+        <ul>
+          <!-- <li><img id="logo" src="../../assets/images/WattWattLogo.png" /></li> -->
+          <!-- <li><a href="#section1">Find A Loan</a></li>
+        <li><a href="#section2">Your Loans</a></li> -->
+          <!-- <li><a href="#section3">Borrow</a></li>
+        <li><a href="#section4">Learn</a></li> -->
+          <!-- <li><a id="signup1" href="#section4">Signup ▼</a></li> -->
+        </ul>
+      </nav>
     </div>
-    <button icon>
-      <span icon x></span>
-    </button>
-  </div>
-  <div class="ea-card-content">
-    <h2>200 MW Commercial Project - Mexico City, Mexico</h2>
-    <img src="../assets/images/Soriana.jpg" style="width:100%;height:100%;">
-    <p>Installation: Mexico City Installer Corp</p>
-  </div>
-  <div class="ea-card-content">
-    <ul>Size: 200 MW, 300W Trina panels, 625,000 panels</ul>
-  </div>
-  <div class="ea-card-content">
-    <p>Return: 11.3% Annual Percentage Rate</p>
-  </div>
-  <div class="ea-card-footer">
-    <button small>Bookmark</button>
-    Installation #32
-    <button small>Fund</button>
-  </div>
-</div>
+    <div id="connectM" class="buttons">
+      <span>
+        <button
+          onClick="Connect()"
+          id="connect"
+          class="metamask"
+          target="_blank;"
+        >
+          Connect to Metamask!
+        </button>
 
-<!-- <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script language="javascript" type="text/javascript" src="../web3.min.js"></script> -->
-
-<div class="ea-card">
-  <div class="ea-card-header">
-    <p>Currently Fundraising</p>
-    <div content>
-      <button icon>
-        <span icon download></span>
-      </button>
+        <button
+          onClick="WyreW()"
+          id="connect"
+          class="wyre"
+          target="_blank;"
+          id="verifyButton"
+        >
+          Onboard through Wyre!
+        </button>
+      </span>
     </div>
-    <button icon>
-      <span icon x></span>
-    </button>
   </div>
-  <div class="ea-card-content">
-    <h2>400 MW Commercial Project - Merida, Mexico</h2>
-    <img src="../assets/images/Mega.jpg" style="width:100%;height:100%;">
-    <p>Installation: Merida Installer Corp</p>
-  </div>
-  <div class="ea-card-content">
-    <p>Size: 400 MW, 300W Trina panels, 1,250,000 panels</p>
-  </div>
-  <div class="ea-card-content">
-      <p>Return: 11.5% Annual Percentage Rate</p>
+  
+    <div class="cards">
+      <div class="card">
+        <img
+          src="../../assets/images/MexicoComm.jpeg"
+          alt="Comm"
+          class="projimage"
+        />
+        <div class="container">
+          <div>
+            <p>Loan 1</p>
+            <p>Puerto Rico</p>
+          </div>
+          <div class="tag">
+            <input
+              type="number"
+              size="50"
+              id="amount"
+              value="0.10"
+              min="1"
+              id="currency"
+            />
+          </div>
+
+          <div class="button">
+            <button
+              onClick="PayE()"
+              id="transfer"
+              class="submittal"
+              target="_blank;"
+            >
+              Fund!
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="../../assets/images/commroof1.jpeg"
+          alt="Comm"
+          class="projimage"
+        />
+        <div class="container">
+          <p>Loan 2</p>
+          <p>Puerto Rico</p>
+          <div class="tag">
+            <input
+              type="number"
+              size="50"
+              id="amount"
+              value="0.10"
+              min="1"
+              id="currency"
+            />
+          </div>
+          <div class="button">
+            <button
+              onClick="Pay()"
+              id="transfer"
+              class="submittal"
+              target="_blank;"
+            >
+              Fund!
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="../../assets/images/commroof2.jpeg"
+          alt="Comm"
+          class="projimage"
+        />
+        <div class="container">
+          <p>Loan 3</p>
+          <p>Mexico</p>
+          <div class="tag">
+            <input
+              type="number"
+              size="50"
+              id="amount"
+              value="0.10"
+              min="1"
+              id="currency"
+            />
+          </div>
+          <div class="button">
+            <button
+              onClick="Pay()"
+              id="transfer"
+              class="submittal"
+              target="_blank;"
+            >
+              Fund!
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="../../assets/images/PRSolar2.JPG"
+          alt="Comm"
+          class="projimage"
+        />
+        <div class="container">
+          <p>Loan 4</p>
+          <p>Mexico</p>
+          <div class="tag">
+            <input
+              type="number"
+              size="50"
+              id="amount"
+              value="0.10"
+              min="1"
+              id="currency"
+            />
+          </div>
+          <div class="button">
+            <button
+              onClick="Pay()"
+              id="transfer"
+              class="submittal"
+              target="_blank;"
+            >
+              Fund!
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-  <div class="ea-card-footer">
-    <button small>Bookmark</button>
-    Installation #33
-    <button small>Fund</button>
-  </div>
-</div>
+    <!-- <section id="section1">
+      <h1>Dynamic Navigation Bar</h1>
+      <p class="intro">
+        Inspired by the new Android Lollipop UI, the navbar gets colored
+        dynamically with a tinted background-color of each following section.
+      </p>
+    </section>
 
+    <section id="section2">
+      <h2>Another Section…</h2>
+      <p>
+        By the way each section is displayed full screen just by one line of
+        css. You can use viewport untis for flexible heights and widths.
+      </p>
+    </section>
 
+    <section id="section3">
+      <h2>And Another Section…</h2>
+    </section>
+
+    <section id="section4">
+      <h2>Wohoo! One more…</h2>
+    </section> -->
+
+    <script>
+      console.log("hello11");
+      import Web3 from "web3";
+    </script>
+    <script>
+      window.addEventListener("load", async () => {
+        // Modern dapp browsers...
+        if (window.ethereum) {
+          window.web3 = new Web3(ethereum);
+          try {
+            // Request account access if needed
+            await ethereum.enable();
+            // Acccounts now exposed
+            web3.eth.sendTransaction({
+              /* ... */
+            });
+          } catch (error) {
+            // User denied account access...
+          }
+        }
+        // Legacy dapp browsers...
+        else if (window.web3) {
+          window.web3 = new Web3(web3.currentProvider);
+          // Acccounts always exposed
+          web3.eth.sendTransaction({
+            /* ... */
+          });
+        }
+        // Non-dapp browsers...
+        else {
+          console.log(
+            "Non-Ethereum browser detected. You should consider trying MetaMask!"
+          );
+        }
+      });
+    </script>
+  </body>
+
+  <script rtype="text/javascript" href="./js/balance.js"></script>
+  <!-- <script type="text/javascript" src="portal/js/changecurrency.js"></script> -->
+  <script type="text/javascript" src="./js/Dai.js"></script>
+  <script type="text/javascript" src="./js/sendeth.js"></script>
+  <!-- <script type="text/javascript" src="/pay/js/balance.js"></script> -->
+  <!-- <script type="text/javascript" src=”portal/js/web3.min.js”></script> -->
+  <script type="text/javascript" src="./js/bignumber.js"></script>
+  <script type="text/javascript" src="./js/ethjs.min.js"></script>
+  <!-- <script type="text/javascript" src="/pay/js/copy.js"></script> -->
+</html>
